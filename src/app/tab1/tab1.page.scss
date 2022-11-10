@@ -1,4 +1,18 @@
-ionic-item{
-color: rgb(196, 175, 223);
 
+ion-card{
+    width: 70%;
+    height: 15%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+
+}
+
+ion-title{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 180%;
 }

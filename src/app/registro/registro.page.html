@@ -1,11 +1,14 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header [translucent]="true" >
+  <ion-toolbar color="sangue">
     <ion-title>registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
+
+<img src="https://images.vexels.com/media/users/3/140928/isolated/preview/8d338f5acd60bfbc9b5fb1b208c8814f-icone-de-e-mail-com-contorno.png" alt="">
 <ion-content>
-  <ion-item>
+  <ion-card color="light">
+  <ion-item >
     <ion-label>Nome:</ion-label>
     <ion-input placeholder="adicione seu nome completo"></ion-input>
   </ion-item>
@@ -22,13 +25,16 @@
 <br>
   <ion-item>
     <ion-label>Senha:</ion-label>
-    <ion-input placeholder="adicione sua senha"></ion-input>
+    <ion-input placeholder="••••••••"></ion-input>
   </ion-item>
 <br>
   <ion-item>
     <ion-label>Confirmar senha:</ion-label>
-    <ion-input placeholder="adicione sua senha novamente"></ion-input>
+    <ion-input placeholder="••••••••"></ion-input>
   </ion-item>
-  <ion-button shape="round" color="botoes"> <ion-icon name="open-outline"></ion-icon> Salvar</ion-button>
-  <ion-button shape="round" color="botoes"> <ion-icon name="arrow-back-outline"></ion-icon> voltar</ion-button>
+  </ion-card>
+
+  <ion-button shape="round" color="sangue" > <ion-icon name="open-outline"></ion-icon> Salvar</ion-button>
+  <ion-button shape="round" color="sangue" routerLink="tab1" > <ion-icon name="arrow-back-outline"></ion-icon> voltar</ion-button>
+
 </ion-content>

@@ -1,19 +1,28 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header  [translucent]="true">
+  <ion-toolbar color="sangue">
     <ion-title>login</ion-title>
   </ion-toolbar>
 </ion-header>
-
+<br>
+<br>
 <ion-content>
-  <ion-item>
-    <ion-label>E-MAIL:</ion-label>
-    <ion-input placeholder="adicione seu email"></ion-input>
+  <ion-card>
+    <ion-card-content>
+  <ion-item color="sangue">
+  <ion-label>E-MAIL:</ion-label>
+  <ion-input placeholder="adicione seu email"></ion-input>
   </ion-item>
-  <ion-item>
+<br>
+  <ion-item color="sangue">
     <ion-label>Senha:</ion-label>
-    <ion-input placeholder="adicione sua senha"></ion-input>
+    <ion-input placeholder="••••••••"></ion-input>
   </ion-item>
-  <ion-button shape="round" color="botoes">Entrar</ion-button>
-  <ion-button shape="round" color="botoes">Registrar</ion-button>
-  <ion-button shape="round" color="botoes">Esqueceu a senha</ion-button>
+
+
+<br>
+  <ion-button shape="round" color="sangue">Entrar</ion-button>
+  <ion-button shape="round" color="sangue">Registrar</ion-button>
+  <ion-button shape="round" color="sangue">Esqueceu a senha</ion-button>
+</ion-card-content>
+</ion-card>
 </ion-content>

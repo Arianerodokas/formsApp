@@ -1,9 +1,32 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>produto</ion-title>
+<ion-header  [translucent]="true">
+  <ion-toolbar color="sangue">
+    <ion-title color="light">produto</ion-title>
   </ion-toolbar>
 </ion-header>
-
+<br>
+<br>
+<br>
 <ion-content>
 
+      <ion-card>
+    <ion-item color="sangue">
+    <ion-label >Nome:</ion-label>
+    <ion-input placeholder="adicione o nome"></ion-input>
+    </ion-item>
+  <br>
+    <ion-item color="sangue">
+      <ion-label>Descrição:</ion-label>
+      <ion-input placeholder="adicione uma descrição ao produto"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item color="sangue">
+      <ion-label>Validade:</ion-label>
+      <ion-input placeholder="Adicione uma data ou prazo para a validade do produto"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item color="sangue">
+      <ion-label>Preço:</ion-label>
+      <ion-input placeholder="R$ 000,00"></ion-input>
+    </ion-item>
+    </ion-card>
 </ion-content>

@@ -7,36 +7,36 @@
 
 
 <ion-content>
+<form [formGroup] = "formRegistro">
 
-  <ion-card color="light">
   <ion-item >
-    <ion-label>Nome:</ion-label>
-    <ion-input placeholder="adicione seu nome completo"></ion-input>
+    <ion-label placeholder="adicione seu nome completo">Nome:</ion-label>
+    <ion-input formControlName="nome"></ion-input>
   </ion-item>
 <br>
   <ion-item>
-    <ion-label>CPF:</ion-label>
-    <ion-input placeholder="000.000.000-00"></ion-input>
+    <ion-label placeholder="000.000.000-00"> CPF:</ion-label>
+    <ion-input formControlName="cpf"></ion-input>
   </ion-item>
 <br>
   <ion-item>
-    <ion-label>E-MAIL:</ion-label>
-    <ion-input placeholder="adicione seu email"></ion-input>
+    <ion-label placeholder="adicione seu email">E-MAIL:</ion-label>
+    <ion-input formControlName="email"></ion-input>
   </ion-item>
 <br>
   <ion-item>
-    <ion-label>Senha:</ion-label>
-    <ion-input placeholder="••••••••"></ion-input>
+    <ion-label  placeholder="••••••••">Senha:</ion-label>
+    <ion-input type="password" formControlName="senha"></ion-input>
   </ion-item>
 <br>
   <ion-item>
-    <ion-label>Confirmar senha:</ion-label>
-    <ion-input placeholder="••••••••"></ion-input>
+    <ion-label placeholder="••••••••">Confirmar senha:</ion-label>
+    <ion-input type="password" formControlName="confirmaSenha"></ion-input>
   </ion-item>
-  </ion-card>
 
-  <ion-button shape="round" color="sangue" > <ion-icon name="open-outline"></ion-icon> Salvar</ion-button>
+
+  <ion-button shape="round" color="sangue"  (click)="salvarRegistro()"> <ion-icon name="open-outline"></ion-icon> Salvar</ion-button>
   <ion-button shape="round" color="sangue" routerLink="tab1" > <ion-icon name="arrow-back-outline"></ion-icon> voltar</ion-button>
-
-</ion-content>
+</form>
+  </ion-content>
 

@@ -1,5 +1,7 @@
+import { StorageService } from './../services/storage.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Usuario } from '../models/usuario';
 
 
 @Component({
@@ -11,8 +13,37 @@ export class RegistroPage implements OnInit {
 
 
 formRegistro: FormGroup;
+usuario: Usuario = new Usuario();
 
-  constructor(private formBuilder: FormBuilder) {
+mensagens = {
+
+nome: [
+
+{tipo: 'required', mensagem: 'O campo do Nome é obrigatório!' },
+{tipo: 'minlength' , mensagem: 'O campo do Nome precisa ter pelo menos 3 caracteries!' },
+],
+
+cpf: [
+  {tipo: 'required', mensagem: 'O campo do CPF é obrigatório!' },
+],
+email: [
+{tipo: 'required', mensagem: 'O campo do email é obrigatório!' },
+],
+senha: [
+  {tipo: 'required', mensagem: 'O campo da senha é obrigatório!' },
+  {tipo: 'minlength', mensagem: 'O campo da senha tem quer no minimo 6 caracteries' },
+  {tipo: 'maxlength', mensagem: 'O campo da senha tem quer no máximo 8 caracteries' },
+
+],
+confirmaSenha: [
+  {tipo: 'required', mensagem: 'O campo de confirmar senha é obrigatório!' },
+  {tipo: 'minlength', mensagem: 'O campo de confirmar senha tem quer no minimo 6 caracteries' },
+  {tipo: 'maxlength', mensagem: 'O campo de confirmar senha tem quer no máximo 8 caracteries' },
+  {tipo: 'comparacao', mensagem: 'Deve ser igual a senha'},
+],
+};
+
+  constructor(private formBuilder: FormBuilder, private storageService: StorageService) {
 
 this.formRegistro = this.formBuilder.group({
 
@@ -31,10 +62,16 @@ confirmaSenha:['', Validators.compose([Validators.required, Validators.minLength
   ngOnInit() {
   }
 
-salvarRegistro(){
-
-console.log('Formulário: ', this.formRegistro.valid);
-
+async salvarRegistro(){
+if (this.formRegistro.valid){
+ this.usuario.nome = this.formRegistro.value.nome;
+ this.usuario.cpf = this.formRegistro.value.cpf;
+ this.usuario.email = this.formRegistro.value.email;
+ this.usuario.senha = this.formRegistro.value.senha;
+await this.storageService.set(this.usuario.email, this.usuario);
+}else{
+alert('Formulário inválido!');
+}
 }
 
 

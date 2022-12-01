@@ -1,3 +1,5 @@
+import { StorageService } from './../services/storage.service';
+import { Usuario } from './../models/Usuario';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,6 +9,7 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+constructor() {}
 
 }
+

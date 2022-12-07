@@ -1,15 +1,19 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="sangue">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/registro"></ion-back-button>
     </ion-buttons>
 
-    <ion-title>
-      Tab 2
+
+    <ion-title color="light">
+      Registros Salvos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
+<div id="fundo">
+  <img src="https://img.wallpapersafari.com/tablet/800/1280/9/3/alWT49.jpg" alt="">
+      </div>
 <ion-content [fullscreen]="true">
   <ion-item-sliding *ngFor="let user of listaUsuarios">
     <ion-item>
@@ -23,7 +27,7 @@
     </ion-item>
 
     <ion-item-options side="end">
-      <ion-item-option color="danger">
+      <ion-item-option color="danger" (click)="excluirRegistro(user.email)">
         <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
       </ion-item-option>
     </ion-item-options>

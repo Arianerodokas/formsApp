@@ -3,3 +3,32 @@ ion-title{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 180%;
 }
+
+#img1{
+  //width: 30%;
+  margin: 20vw auto;
+  width: 30%;
+
+
+
+ }
+
+ ion-card{
+  color:#e6e6e6
+ }
+
+ ion-content{
+   width: 80%;
+   top: 40%;
+   left: 50%;
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+
+
+ }
+
+ body{
+background-color: #e6e6e6;
+ }
+
+

@@ -4,6 +4,12 @@
   </ion-toolbar>
 </ion-header>
 
+<body>
+
+<div id="img1">
+  <img src="https://etc.usf.edu/presentations/extras/letters/varsity_letters/20/13/A-200.png" alt="">
+    </div>
+
 <ion-content>
   <form [formGroup]="formRegistro">
     <ion-item>
@@ -57,9 +63,9 @@
         </span>
       </ng-container>
     </ion-item>
-    <br />
+
     <ion-item>
-      <ion-label placeholder="••••••••"></ion-label>
+      <ion-label placeholder="••••••••">Confirmar senha:</ion-label>
       <ion-input type="password" formControlName="confirmaSenha"></ion-input>
       <ng-container *ngFor="let erro of mensagens.confirmaSenha">
         <span
@@ -85,3 +91,5 @@
     >
   </form>
 </ion-content>
+
+</body>

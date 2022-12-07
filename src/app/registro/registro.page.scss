@@ -10,3 +10,25 @@ ion-title{
   clear: both;
   position: relative;
 }
+
+#img1{
+  //width: 30%;
+  margin: 15vw auto;
+  width: 30%;
+
+
+
+ }
+
+ ion-content{
+   width: 80%;
+   top: 39%;
+   left: 50%;
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+
+ }
+
+ body{
+background-color: #e6e6e6;
+ }
